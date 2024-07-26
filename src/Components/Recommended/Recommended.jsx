@@ -21,14 +21,14 @@ const Recommended = ({categoryId}) => {
       {apiData.map((item,index)=>{
         return (
 
-          <div className="side-video-list">
-          <Link to={`/video/${item.snippet.categoryId}/${item.id}`} key={index} className="vid-info">
+          <Link to={`/video/${item.snippet.categoryId}/${item.id}`} className="side-video-list">
           <img src={item.snippet.thumbnails.medium.url} alt="" />
+          <div key={index} className="vid-info">
             <h4>{item.snippet.title}</h4>
             <p>{item.snippet.channelTitle}</p>
             <p>{value_converter(item.statistics.viewCount)} Views </p>
-      </Link>
-        </div>
+          </div>
+        </Link>
 
         )
       })}
