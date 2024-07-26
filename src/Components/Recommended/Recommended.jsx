@@ -22,12 +22,12 @@ const Recommended = ({categoryId}) => {
         return (
 
           <div className="side-video-list">
-          <img src={item.snippet.thumbnails.medium.url} alt="" />
           <Link to={`/video/${item.snippet.categoryId}/${item.id}`} key={index} className="vid-info">
+          <img src={item.snippet.thumbnails.medium.url} alt="" />
             <h4>{item.snippet.title}</h4>
             <p>{item.snippet.channelTitle}</p>
             <p>{value_converter(item.statistics.viewCount)} Views </p>
-          </Link>
+      </Link>
         </div>
 
         )
